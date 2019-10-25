@@ -3,13 +3,13 @@ title: 查詢的運作方式 - EF Core
 author: rowanmiller
 ms.date: 09/26/2018
 ms.assetid: de2e34cd-659b-4cab-b5ed-7a979c6bf120
-uid: core/querying/overview
-ms.openlocfilehash: 23d26f9c0ac17fc0df744f5339946947ea366911
-ms.sourcegitcommit: 15022dd06d919c29b1189c82611ea32f9fdc6617
-ms.translationtype: HT
+uid: core/querying/how-query-works
+ms.openlocfilehash: bc085755f39b1288f092a8b2df892c1bf82a89f1
+ms.sourcegitcommit: 708b18520321c587b2046ad2ea9fa7c48aeebfe5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47415727"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72186264"
 ---
 # <a name="how-queries-work"></a>查詢的運作方式
 
@@ -45,4 +45,4 @@ Entity Framework Core 使用 Language Integrated Query (LINQ) 查詢來自資料
 * 將查詢的結果資料繫結到 UI
 
 > [!WARNING]  
-> **一律驗證使用者輸入：** 雖然 EF Core 使用參數以及在查詢中逸出常值來防止 SQL 插入式攻擊，但是它不會驗證輸入。 在將不受信任來源的值用於 LINQ 查詢中、指派給實體屬性或傳遞至其他 EF Core API 之前，應該執行針對每個應用程式需求的適當驗證。 這包括用來以動態方式建構查詢的任何使用者輸入。 即使在使用 LINQ 時，如果您接受使用者輸入來建置運算式，就必須確定只會建構預期的運算式。
+> **一律驗證使用者輸入：** 雖然 EF Core 使用參數來防止 SQL 插入式攻擊，並在查詢中將常值進行轉義，但它並不會驗證輸入。 在將不受信任來源的值用於 LINQ 查詢中、指派給實體屬性或傳遞至其他 EF Core API 之前，應該執行針對每個應用程式需求的適當驗證。 這包括用來以動態方式建構查詢的任何使用者輸入。 即使在使用 LINQ 時，如果您接受使用者輸入來建置運算式，就必須確定只會建構預期的運算式。
